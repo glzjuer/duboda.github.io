@@ -82,13 +82,13 @@ function initialize() {
   }
   clearFriends();
   
-  if (loadedShowFriends)
+  if (Show_1_floor)
   {
-	showFriends();  
+	show1floor();  
   }
-  else (loadedShowMarkers)
+  else (Show_2_floor)
   {
-	showMarkers();
+	show2floor();
   }
 }
 
@@ -102,11 +102,11 @@ function setFriends(map){
     friendMarkers[i].setMap(map);
   }
 }
-function showMarkers(){
+function show2floor(){
   clearFriends();
   setAllMap(map);
 }
-function showFriends(){
+function show1floor(){
   clearMarkers();
   setFriends(map);
 }
