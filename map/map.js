@@ -4,12 +4,12 @@
 
 var map;
 
-var chicago = new google.maps.LatLng(41.850033, -87.6500523);
-var evanston = new google.maps.LatLng(42.05, -87.7);
-var a = new google.maps.LatLng(42,-87.9);
+var Mudd109 = new google.maps.LatLng(42.058070, -87.675790);
+var Mudd209 = new google.maps.LatLng(42.058020, -87.675767);
+var Mudd309 = new google.maps.LatLng(42.058100, -87.675780);
 
-var locationArray = [chicago, evanston, a];
-var locationNameArray = ['Chicago', 'Evanston', 'A'];
+var locationArray = [Mudd109, Mudd209, Mudd309];
+var locationNameArray = ['Mudd109', 'Mudd209', 'Mudd309'];
 var markers = [];
 
 var tom = new google.maps.LatLng(42, -87.8);
