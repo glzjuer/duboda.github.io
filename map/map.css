@@ -1,0 +1,10 @@
+a:link, a:visited{
+    text-decoration: none;
+}
+#map-canvas {
+    width: 400px;
+    height: 400px;
+	float:center ;
+	margin: 30px;
+}
+
