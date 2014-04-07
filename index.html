@@ -17,6 +17,7 @@
 
     <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/examples/theme/theme.css" rel="stylesheet">
+    <link href="theme.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -38,11 +39,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Home</a>
+          <a class="navbar-brand" onclick="location='index.html'">StallScrwal</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="#">Building</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
             <li class="dropdown">
@@ -67,7 +68,7 @@
       <div class="jumbotron">
         <h3>StallScrawl!</h3>
         <p><font size = "3" >This is a quick way to find the bathroom in the building of Northwestern.</font></p>
-        <p><a href="#" class="btn btn-primary btn-xs" role="button">Learn more &raquo;</a></p>
+        <p><a href="#" class="btn btn-primary btn-sm" role="button">Learn more &raquo;</a></p>
       </div>
 
 
@@ -77,48 +78,14 @@
       </div>
       <p>
       <p>
-      <div class="btn-group">
-  		<button type="button" class="btn btn-lg btn-primary">Mudd Libary</button>
-		<div class="btn-group">
-    	    <button type="button" class="btn btn-lg btn-primary dropdown-toggle" data-toggle="dropdown">
-      	       <span class="caret"></span>
-    	    </button>
-    	    <ul class="dropdown-menu">
-               <li><a href="#">Floor 1</a></li>
-               <li><a href="#">Floor 2</a></li>
-               <li><a href="#">Floor 3</a></li>
-            </ul>
-        </div>
-      </div>
+  		<button type="button" class="btn btn-lg btn-primary btn-block" onclick="location='floor.html';">Mudd Libary</button>
       </p>
       <p>
-      <div class="btn-group">
-  		<button type="button" class="btn btn-lg btn-primary">Ford Building</button>
-		<div class="btn-group">
-    	    <button type="button" class="btn btn-lg btn-primary dropdown-toggle" data-toggle="dropdown">
-      	       <span class="caret"></span>
-    	    </button>
-    	    <ul class="dropdown-menu">
-               <li><a href="#">Floor 1</a></li>
-               <li><a href="#">Floor 2</a></li>
-               <li><a href="#">Floor 3</a></li>
-            </ul>
-        </div>
-      </div>
-      </p>    
-     <div class="btn-group">
-  		<button type="button" class="btn btn-lg btn-primary">Tech Building</button>
-		<div class="btn-group">
-    	    <button type="button" class="btn btn-lg btn-primary dropdown-toggle" data-toggle="dropdown">
-      	       <span class="caret"></span>
-    	    </button>
-    	    <ul class="dropdown-menu">
-               <li><a href="#">Floor 1</a></li>
-               <li><a href="#">Floor 2</a></li>
-               <li><a href="#">Floor 3</a></li>
-            </ul>
-        </div>
-     </div>     
+  		<button type="button" class="btn btn-lg btn-primary btn-block">Ford Building</button>
+      </p> 
+      <p>   
+  		<button type="button" class="btn btn-lg btn-primary btn-block">Tech Building</button>
+     </p>     
      </p>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
