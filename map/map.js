@@ -4,12 +4,12 @@
 
 var map;
 
-var Mudd109 = new google.maps.LatLng(42.058070, -87.675790);
-var Mudd209 = new google.maps.LatLng(42.058020, -87.675767);
-var Mudd309 = new google.maps.LatLng(42.058100, -87.675780);
+var Tech109 = new google.maps.LatLng(42.058170, -87.675690);
+var Tech209 = new google.maps.LatLng(42.058020, -87.675567);
+var Tech309 = new google.maps.LatLng(42.058150, -87.675780);
 
-var locationArray = [Mudd109, Mudd209, Mudd309];
-var locationNameArray = ['Mudd109', 'Mudd209', 'Mudd309'];
+var locationArray = [Tech109, Tech209, Tech309];
+var locationNameArray = ['Tech109', 'Tech209', 'Tech309'];
 var markers = [];
 
 var tom = new google.maps.LatLng(42, -87.8);
@@ -23,7 +23,7 @@ var friendMarkers = [];
 
 function initialize() {
   var mapOptions = {
-    zoom: 9
+    zoom: 20
   };
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
@@ -37,7 +37,7 @@ function initialize() {
       var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
-        content: 'Location found using HTML5.'
+        content: 'Here is your current location.'
       });
 
       map.setCenter(pos);
@@ -126,9 +126,9 @@ function deleteFriends(){
 }
 
 function attachActivityMessage(marker, num){
-  var message = ['<a href="../activity/abnet_activity_profile.html">Field Museum</a>',
-		 '<a href="../activity/abnet_activity_profile.html">Dancing in Norris Center</a>',
-		 '<a href="../activity/abnet_activity_profile.html">Shopping</a>'];
+  var message = ['<a href="../review_Page.html">Tech109</a>',
+		 '<a href="../review_Page.html">Tech209</a>',
+		 '<a href="../review_Page.html">Tech309</a>'];
   var infowindow = new google.maps.InfoWindow({
     content: message[num]
   });
@@ -138,9 +138,9 @@ function attachActivityMessage(marker, num){
   });
 }
 function attachFriendMessage(marker, num){
-  var message = ['<a href="../friends/abnet_friend_profile.php">Tom</a>',
-		 '<a href="../friends/abnet_friend_profile.php">Jim</a>',
-		 '<a href="../friends/abnet_friend_profile.php">Peter</a>'];
+  var message = ['<a href="../review_Page.html">Tom</a>',
+		 '<a href="../review_Page.html">Jim</a>',
+		 '<a href="../review_Page.html">Peter</a>'];
   var infowindow = new google.maps.InfoWindow({
     content: message[num]
   });
@@ -159,7 +159,7 @@ function handleNoGeolocation(errorFlag) {
 
   var options = {
     map: map,
-    position: chicago,
+    position: Tech109,
     content: content
   };
 
