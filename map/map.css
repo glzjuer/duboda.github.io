@@ -2,9 +2,9 @@ a:link, a:visited{
     text-decoration: none;
 }
 #map-canvas {
-    width: 250px;
+    width: 240px;
     height: 450px;
 	float:center ;
-	margin: 30px;
+	margin: 0px;
 }
 
