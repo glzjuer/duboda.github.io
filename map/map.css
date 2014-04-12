@@ -3,8 +3,8 @@ a:link, a:visited{
 }
 #map-canvas {
     width: 240px;
-    height: 450px;
-	float:center ;
-	margin: 0px;
+    height: 280px;
+    float:center;
+	margin: 10px;
 }
 
