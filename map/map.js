@@ -29,7 +29,7 @@ query.find({
     alert("Error: " + error.code + " " + error.message);
 }
 });
-alert(locationArray[4]);
+alert(locationArray[2]);
 var locationNameArray = ['Tech109', 'Tech209', 'Tech409'];
 var markers = [];
 
