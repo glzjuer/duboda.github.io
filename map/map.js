@@ -145,7 +145,8 @@ function myFunctionQuery(){
       alert("Error: " + error.code + " " + error.message);
   }
 });
-  
+};
+
 function attachActivityMessage(marker, num){
   var message = ['<a href="../review_Page.html">Tech109</a>',
 		 '<a href="../review_Page.html">Tech209</a>',
