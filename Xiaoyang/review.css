@@ -1,0 +1,45 @@
+img.media-object {
+	float: left;
+	margin-bottom: 25px;
+}
+
+iframe {
+	margin-left: 20px;
+	float: left;
+	margin-right: 100px;
+}
+
+.stars {
+	font-size: 125%;
+	color: yellow;
+}
+
+.submit_review {
+	float: right;
+	display: block;
+	margin-right: 0px;
+	clear: left;
+}
+
+.footer {
+	display: block;
+	clear: right;
+}
+
+.rating {
+  font-size: 125%;
+  color: blue;
+  unicode-bidi: bidi-override;
+  direction: rtl;
+
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
