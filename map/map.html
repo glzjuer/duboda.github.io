@@ -20,8 +20,10 @@
     <!-- Add Control Variable, use for back-end -->
       var Show_1_floor = true;
       var Show_2_floor = true;
+
     </script>
 
+    <script src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="map.js"></script>
@@ -83,7 +85,19 @@
       <!-- Map Section -->
       <div id="map-canvas"></div>
       <p>
-      <button type="button" class="btn btn-lg btn-primary btn-block" onclick="location='../floor.html';">Back to The Floor Page</button>
+      <button type="button" class="btn btn-lg btn-primary btn-block" onclick="myFunctionQuery()">Ground Floor</button>
+      </p>
+      <p>
+      <button type="button" class="btn btn-lg btn-primary btn-block" onclick="location='../floor.html';">First Floor</button>
+      </p>
+      <p>
+      <button type="button" class="btn btn-lg btn-primary btn-block" onclick="location='../floor.html';">Second Floor</button>
+      </p>
+      <p>
+      <button type="button" class="btn btn-lg btn-primary btn-block" onclick="location='../floor.html';">Third Floor</button>
+      </p>
+      <p>
+      <button type="button" class="btn btn-lg btn-primary btn-block" onclick="location='../floor.html';">fourth Floor</button>
       </p>
     <!-- </div> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
