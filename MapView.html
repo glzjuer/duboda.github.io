@@ -13,13 +13,9 @@
 
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.js"></script>
+
     <script src="http://cdn.jsdelivr.net/jquery.mixitup/2.1.1/jquery.mixitup.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
-    <style>
-
-    </style>
 
     <title>StallScrawl</title>
 
@@ -85,96 +81,79 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-xs-2">
             </div>
-            <div class="col-xs-4 col-xs-offset-1">
-                <div class="btn-group" data-toggle="buttons">
-                    <button type="checkbox" class="btn btn-primary">F</button>
-                    <button type="checkbox" class="btn btn-primary" id="gender-m">M</button>
-                </div>
+
+            <div class="col-xs-4 col-xs-offset-1 btn-group" data-toggle = "buttons">
+                <label class="btn btn-primary">
+                    <input type="radio" id="female" name = "gender">F
+                </label>
+                <label class="btn btn-danger">
+                    <input type="radio" id="male" name = "gender">M
+                </label>
             </div>
         </div>
     </div>
-    
+
     <p>
-    <div class="container" id="views">
-        <div id = "list">
-            <table class = "table table-stripped">
-                <thead><tr>
-                <th>#</th>
-                <th>stars</th>
-                </tr></thead>
+        <div class="container" id="views">
+                <table class="table table-striped" id="list" style = "height : 100px">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>stars</th>
+                        </tr>
+                    </thead>
 
-                
                     <tbody>
-        <tr>
-            <td>Dell</td>
-            <td>Vostro</td>
-        </tr>
-        <tr>
-            <td>Dell</td>
-            <td>E1405</td>
-        </tr>
-        <tr>
-            <td>Dell</td>
-            <td>Inspiron 1525</td>
-        </tr>
-        <tr>
-            <td>Packard Bell</td>
-            <td>F7305</td>
-        </tr>
-        <tr>
-            <td>Packard Bell</td>
-            <td>Easy Note A7</td>
-        </tr>
-        <tr>
-            <td>Hewlett Packard</td>
-            <td>Touchpad</td>
-        </tr>
-        <tr>
-            <td>Hewlett Packard</td>
-            <td>Pavilion Elite</td>
-        </tr>
-        <tr>
-            <td>Hewlett Packard</td>
-            <td>Pavilion Elite</td>
-        </tr>
-        <tr>
-            <td>Hewlett Packard</td>
-            <td>Pavilion Elite</td>
-        </tr>
-        <tr>
-            <td>Hewlett Packard</td>
-            <td>Pavilion Elite</td>
-        </tr><tr>
-            <td>Hewlett Packard</td>
-            <td>Pavilion Elite</td>
-        </tr>
-        <tr>
-            <td>Hewlett Packard</td>
-            <td>Pavilion Elite</td>
-        </tr>
-        <tr>
-            <td>Hewlett Packard</td>
-            <td>Pavilion Elite</td>
-        </tr>
-        <tr>
-            <td>Hewlett Packard</td>
-            <td>Pavilion Elite</td>
-        </tr>
-        <tr>
-            <td>Hewlett Packard</td>
-            <td>Pavilion Elite</td>
-        </tr><tr>
-            <td>Hewlett Packard</td>
-            <td>Pavilion Elite</td>
-        </tr>
-    </tbody>
+                        <tr class = "male tech-f3">
+                            <td>Dell</td>
+                            <td>Vostro</td>
+                        </tr>
+                        <tr  class = "female tech-f2">
+                            <td>Dell</td>
+                            <td>E1405</td>
+                        </tr>
+                        <tr  class = "male tech-g">
+                            <td>Dell</td>
+                            <td>Inspiron 1525</td>
+                        </tr>
+                        <tr class = "male tech-f1">
+                            <td>Packard Bell</td>
+                            <td>F7305</td>
+                        </tr>
+                        <tr class = "male tech-f1">
+                            <td>Packard Bell</td>
+                            <td>Easy Note A7</td>
+                        </tr>
+                        <tr class = "female tech-f2">
+                            <td>Hewlett Packard</td>
+                            <td>Touchpad</td>
+                        </tr>
+                        <tr class = "male tech-f3">
+                            <td>Hewlett Packard</td>
+                            <td>Pavilion Elite</td>
+                        </tr>
+                        <tr class = "male tech-g">
+                            <td>Hewlett Packard</td>
+                            <td>Pavilion Elite</td>
+                        </tr>
+                        <tr class = "male tech-f3">
+                            <td>Hewlett Packard</td>
+                            <td>Pavilion Elite</td>
+                        </tr>
+                        <tr class = "female tech-f2">
+                            <td>Hewlett Packard</td>
+                            <td>Pavilion Elite</td>
+                        </tr>
 
+                    </tbody>
+
+
+                </table>
             
-            </table>
         </div>
-    </div>
     </p>
 
 
@@ -182,17 +161,17 @@
         <div class="container">
             <div class="col-xs-12" id="buildings_floors">
                 <div class="row" id="buildings">
-                    <div class="btn-group btn-group-justified">
-                        <div class="btn-group">
-                            <button type="radio" class="btn btn-default " href="#tech-floor" data-toggle="tab">Tech</button>
-                        </div>
-                        <div class="btn-group">
-                            <button type="radio" class="btn btn-default btn-group" href="#mudd-floor" data-toggle="tab">Mudd</button>
-                        </div>
-                        <div class="btn-group">
-                            <button type="radio" class="btn btn-default btn-group" href="#francis-floor" data-toggle="tab">Francis</button>
-                        </div>
-                    </div>
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a  href="#tech" data-toggle="tab">Tech</a>
+                        </li>
+                        <li>
+                            <a href="#mudd" data-toggle="tab">Mudd</a>
+                        </li>
+                        <li>
+                            <a href="#francis" data-toggle="tab">Francis</a>
+                        </li>
+                    </ul>
                 </div>
 
 
@@ -202,67 +181,62 @@
                     <div class="tab-content">
                         <p>
 
-                            <div class="tab-pane "id="tech-floor">
+                            <div class="tab-pane btn-group btn-group-justified" data-toggle="buttons" id="tech">
 
 
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" id="tech-g">G
+                                <label class="btn btn-primary">
+                                    <input type="radio" name = "where" id="tech-g">G
                                 </label>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" id="tech-f1">F1
+                                <label class="btn btn-primary">
+                                    <input type="radio" name = "where" id="tech-f1">F1
                                 </label>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" id="tech-f2">F2
+                                <label class="btn btn-primary">
+                                    <input type="radio" name = "where" id="tech-f2">F2
                                 </label>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" id="tech-f3">F3
+                                <label class="btn btn-primary">
+                                    <input type="radio" name = "where" id="tech-f3">F3
                                 </label>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" id="tech-f4">F4
+                                <label class="btn btn-primary">
+                                    <input type="radio" name = "where" id="tech-f4">F4
                                 </label>
                             </div>
 
-                            <div class="tab-pane btn-group btn-group-justified" id="mudd-floor">
-                                <div class="btn-group">
-                                    <button type="radio" class="btn btn-default" id="mudd-g">G</button>
-                                </div>
-                                <div class="btn-group">
-                                    <button type="radio" class="btn btn-default" id="mudd-f1">F1</button>
-                                </div>
-                                <div class="btn-group">
-                                    <button type="radio" class="btn btn-default" id="mudd-f2">F2</button>
-                                </div>
+                            <div class="tab-pane btn-group btn-group-justified" data-toggle="buttons" id="mudd">
+                                <label class="btn btn-primary">
+                                    <input type="radio" name = "where" id="mudd-g">G</button>
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name = "where" id="mudd-f1">F1
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name = "where" id="mudd-f2">F2
+                                </label>
                             </div>
 
-                                <div class="tab-pane btn-group btn-group-justified" id="francis-floor">
-                                    <div class="btn-group">
-                                        <button type="radio" class="btn btn-default" id="francis-g">G</button>
-                                    </div>
-                                    <div class="btn-group">
-                                        <button type="radio" class="btn btn-default" id="francis-f1">F1</button>
-                                    </div>
-                                    <div class="btn-group">
-                                        <button type="radio" class="btn btn-default" id="francis-f2">F2</button>
-                                    </div>
-                                    <div class="btn-group">
-                                        <button type="radio" class="btn btn-default" id="francis-f2">F3</button>
-                                    </div>
-                                </div>
-                        </div>
+                            <div class="tab-pane btn-group btn-group-justified" data-toggle="buttons" id="francis">
+                                <label class="btn btn-primary">
+                                    <input type="radio" name = "where" id="francis-g">G
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name = "where" id="francis-f1">F1
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name = "where" id="francis-f2">F2
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name = "where" id="francis-f3">F3
+                                </label>
+                            </div>
                     </div>
                 </div>
             </div>
+        </div>
         <p>
+
+
 </body>
 
-<script src = "ListView.js"></script>
-<script src = "MapView.js"></script>
-<script>
-    $(window).on('load resize', function () {
-        $('body').css({
-            "padding-top": $(".navbar").height() + 30 + "px"
-        });
-    });
-</script>
+<script src="ListView.js"></script>
+<script src="MapView.js"></script>
 
 </html>
