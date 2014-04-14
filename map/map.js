@@ -8,7 +8,7 @@ var Tech209 = new google.maps.LatLng(42.058020, -87.675567);
 var Tech309 = new google.maps.LatLng(42.058150, -87.675780);
 
 
-var locationArray = [1,2,3];
+var locationArray = [1,2];
 locationArray[0] = Tech109;
 locationArray[1] = Tech209;
 locationArray[2] = Tech309; 
