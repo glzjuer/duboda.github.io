@@ -8,11 +8,11 @@ var Tech209 = new google.maps.LatLng(42.058020, -87.675567);
 var Tech309 = new google.maps.LatLng(42.058150, -87.675780);
 
 
-var locationArray = [1,2,3];
-locationArray[0] = Tech109;
-locationArray[1] = Tech209;
+var locationNameArray = ['Tech109', 'Tech209'];  //, 'Tech409'
+
+// locationArray[0] = Tech109;
+// locationArray[1] = Tech209;
 locationArray[2] = Tech309; 
-var locationNameArray = ['Tech109', 'Tech209', 'Tech409'];
 var markers = [];
 
 var tom = new google.maps.LatLng(42, -87.8);
