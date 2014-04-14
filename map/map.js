@@ -34,7 +34,7 @@ var friendMarkers = [];
       for (var i = 0; i < results.length; i++) { 
         var object = results[i];
         var Tech = new google.maps.LatLng(object.get('latitude'),object.get('longitude'));
-        locationArray[i] =  Tech;
+        locationArray[i] =  'Tech';
         
       }
   },
