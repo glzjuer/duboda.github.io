@@ -8,8 +8,11 @@ var Tech209 = new google.maps.LatLng(42.058020, -87.675567);
 var Tech309 = new google.maps.LatLng(42.058150, -87.675780);
 
 
-var locationArray = [Tech109, Tech209, Tech309];
-var locationNameArray = ['Tech109', 'Tech209', 'Tech309'];
+var locationArray;
+locationArray[0] = Tech109;
+locationArray[1] = Tech209;
+locationArray[2] = Tech309; 
+var locationNameArray = ['Tech109', 'Tech209', 'Tech409'];
 var markers = [];
 
 var tom = new google.maps.LatLng(42, -87.8);
@@ -23,25 +26,7 @@ var friendMarkers = [];
 
 
 
-  Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
-  var GameScore = Parse.Object.extend("TechBathroom");
-  var query = new Parse.Query(GameScore);
-  query.equalTo("gender", "F")&&query.equalTo("floor",1);
-  query.find({
-    success: function(results) {
-      // alert("Successfully retrieved " + results.length + " scores.");
-      // Do something with the returned Parse.Object values
-      for (var i = 0; i < results.length; i++) { 
-        var object = results[i];
-        var Tech = new google.maps.LatLng(object.get('latitude'),object.get('longitude'));
-        locationArray[i] =  'Tech';
-        
-      }
-  },
-    error: function(error) {
-      alert("Error: " + error.code + " " + error.message);
-  }
-});
+
 
 
 
