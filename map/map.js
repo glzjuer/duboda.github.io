@@ -21,6 +21,7 @@ query.find({
       var object = results[i];
       var Tech = new google.maps.LatLng(object.get('latitude'),object.get('longitude'));
       locationArray[i] =  Tech;
+      alert(locationArray[i]);
       
     }
 },
@@ -28,7 +29,7 @@ query.find({
     alert("Error: " + error.code + " " + error.message);
 }
 });
-var locationNameArray = ['Tech109', 'Tech209', 'Tech409','Tech111','Tech123'];
+var locationNameArray = ['Tech109', 'Tech209', 'Tech409'];
 var markers = [];
 
 var tom = new google.maps.LatLng(42, -87.8);
