@@ -22,7 +22,7 @@ query.find({
       var object = results[i];
       var Tech = new google.maps.LatLng(object.get('latitude'),object.get('longitude'));
       locationArray[i] =  Tech;
-      
+      alert(locationArray[2]);
     }
 },
   error: function(error) {
