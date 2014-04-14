@@ -21,6 +21,43 @@ var friendArray = [tom, jim, peter];
 var friendNameArray = ['Tom', 'Jim', 'Peter'];
 var friendMarkers = [];
 
+
+
+  Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
+  var GameScore = Parse.Object.extend("TechBathroom");
+  var query = new Parse.Query(GameScore);
+  query.equalTo("gender", "F")&&query.equalTo("floor",1);
+  query.find({
+    success: function(results) {
+      // alert("Successfully retrieved " + results.length + " scores.");
+      // Do something with the returned Parse.Object values
+      for (var i = 0; i < results.length; i++) { 
+        var object = results[i];
+        var Tech = new google.maps.LatLng(object.get('latitude'),object.get('longitude'));
+        locationArray[i] =  Tech;
+        
+      }
+  },
+    error: function(error) {
+      alert("Error: " + error.code + " " + error.message);
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function initialize() {
   var mapOptions = {
     zoom: 20
