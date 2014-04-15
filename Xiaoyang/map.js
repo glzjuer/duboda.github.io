@@ -147,11 +147,6 @@ function myFunctionQuery_G(){
           var pos = new google.maps.LatLng(position.coords.latitude,
           position.coords.longitude);
 
-          var infowindow = new google.maps.InfoWindow({
-            map: map,
-            position: pos,
-            content: 'Here is your current location !!'
-          });
  //         locationArray = pos;
          map.setCenter(pos);
          var marker = new google.maps.Marker({
@@ -211,12 +206,6 @@ function myFunctionQuery_1(){
           var pos = new google.maps.LatLng(position.coords.latitude,
           position.coords.longitude);
 
-          var infowindow = new google.maps.InfoWindow({
-            map: map,
-            position: pos,
-            content: 'Here is your current location !!'
-          });
- //         locationArray = pos;
          map.setCenter(pos);
          var marker = new google.maps.Marker({
            position: pos,
@@ -275,11 +264,6 @@ function myFunctionQuery_2(){
           var pos = new google.maps.LatLng(position.coords.latitude,
           position.coords.longitude);
 
-          var infowindow = new google.maps.InfoWindow({
-            map: map,
-            position: pos,
-            content: 'Here is your current location !!'
-          });
  //         locationArray = pos;
          map.setCenter(pos);
          var marker = new google.maps.Marker({
@@ -339,11 +323,6 @@ function myFunctionQuery_3(){
           var pos = new google.maps.LatLng(position.coords.latitude,
           position.coords.longitude);
 
-          var infowindow = new google.maps.InfoWindow({
-            map: map,
-            position: pos,
-            content: 'Here is your current location !!'
-          });
  //         locationArray = pos;
          map.setCenter(pos);
          var marker = new google.maps.Marker({
@@ -403,11 +382,6 @@ function myFunctionQuery_4(){
           var pos = new google.maps.LatLng(position.coords.latitude,
           position.coords.longitude);
 
-          var infowindow = new google.maps.InfoWindow({
-            map: map,
-            position: pos,
-            content: 'Here is your current location !!'
-          });
  //         locationArray = pos;
          map.setCenter(pos);
          var marker = new google.maps.Marker({
