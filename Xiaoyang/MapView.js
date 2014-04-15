@@ -17,10 +17,12 @@
             });
 
             console.log(checkedID);
+
             $.each(checkedID,function(index,value){
                 checkselect = checkselect+'.'+value;
             });
             console.log(checkselect);
+
             var rows = $('table.table.table-striped tr');
             console.log(rows);
 
