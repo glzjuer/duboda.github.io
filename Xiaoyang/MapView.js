@@ -30,7 +30,6 @@
             console.log(shows);
             shows.show();
             rows.not(shows).hide();
-
         };
 
         $(":radio").change(countChecked);
