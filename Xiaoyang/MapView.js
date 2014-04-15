@@ -76,6 +76,7 @@
 
 
  function initialize() {
+    $('#list').hide();
      var column_stars = $("#stars").index();
      $('tbody').children().each(function () {
          $(this).find('td').eq(column_stars).raty({
