@@ -13,8 +13,6 @@
 
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-    <script src="http://cdn.jsdelivr.net/jquery.mixitup/2.1.1/jquery.mixitup.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
     <title>StallScrawl</title>
@@ -23,8 +21,11 @@
 
     <style>
         .scroll {
-            max-height:350px;
+            max-height: 350px;
             overflow: auto;
+        }
+        td {
+            width: 50%;
         }
     </style>
 
@@ -187,65 +188,206 @@
                 map hold place
             </div>
 
-            <div class = "scroll">
-            <table class="table table-striped" id="list">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>stars</th>
-                    </tr>
-                </thead>
+            <div class="scroll">
+                <table class="table table-striped" id="list">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th id="stars">stars</th>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                    <tr class="male tech-f3">
-                        <td>Dell</td>
-                        <td>Vostro</td>
-                    </tr>
-                    <tr class="female tech-f2">
-                        <td>Dell</td>
-                        <td>E1405</td>
-                    </tr>
-                    <tr class="male tech-g">
-                        <td>Dell</td>
-                        <td>Inspiron 1525</td>
-                    </tr>
-                    <tr class="male tech-f1">
-                        <td>Packard Bell</td>
-                        <td>F7305</td>
-                    </tr>
-                    <tr class="male tech-f1">
-                        <td>Packard Bell</td>
-                        <td>Easy Note A7</td>
-                    </tr>
-                    <tr class="female tech-f2">
-                        <td>Hewlett Packard</td>
-                        <td>Touchpad</td>
-                    </tr>
-                    <tr class="male tech-f3">
-                        <td>Hewlett Packard</td>
-                        <td>Pavilion Elite</td>
-                    </tr>
-                    <tr class="male tech-g">
-                        <td>Hewlett Packard</td>
-                        <td>Pavilion Elite</td>
-                    </tr>
-                    <tr class="male tech-f3">
-                        <td>Hewlett Packard</td>
-                        <td>Pavilion Elite</td>
-                    </tr>
-                    <tr class="female tech-f2">
-                        <td>Hewlett Packard</td>
-                        <td>Pavilion Elite</td>
-                    </tr>
+                    <tbody>
+                        <tr class="male tech-f3" data-toggle="modal" data-target="#details">
+                            <td>Dell</td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr class="female tech-f2" data-toggle="modal" data-target="#details">
+                            <td>Dell</td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr class="male tech-g" data-toggle="modal" data-target="#details">
+                            <td>Dell</td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr class="male tech-f1" data-toggle="modal" data-target="#details">
+                            <td>Packard Bell</td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr class="male tech-f1" data-toggle="modal" data-target="#details">
+                            <td>Packard Bell</td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr class="female tech-f2" data-toggle="modal" data-target="#details">
+                            <td>Hewlett Packard</td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr class="male tech-f3" data-toggle="modal" data-target="#details">
+                            <td>Hewlett Packard</td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr class="male tech-g" data-toggle="modal" data-target="#details">
+                            <td>Hewlett Packard</td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr class="male tech-f3" data-toggle="modal" data-target="#details">
+                            <td>Hewlett Packard</td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr class="female tech-f2" data-toggle="modal" data-target="#details">
+                            <td>Hewlett Packard</td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr class="female tech-f2" data-toggle="modal" data-target="#details">
+                            <td>Hewlett Packard</td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr class="female tech-f2" data-toggle="modal" data-target="#details">
+                            <td>Hewlett Packard</td>
+                            <td>
+                                <div></div>
+                            </td>
+                        </tr>
 
-                </tbody>
-            </table></div>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </p>
+
+    <!--  -->
+
+    <div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <!-- <h2 class="modal-title" id="myModalLabel">Men's 3rd Floor Mudd</h2> -->
+                </div>
+
+                <!-- <div class="row marketing">
+        <div>
+            <iframe width="280" height="280" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?ie=UTF8&amp;ll=42.05804,-87.67442&amp;spn=0.001251,0.002468&amp;t=m&amp;z=19&amp;output=embed"></iframe>
+        </div>
+    </div> -->
+                <div class="modal-body">
+                    <h2>Ratings for Men's 3rd Floor Mudd Bathroom</h2>
+
+                    <div>
+                        <h4> Cleanliness:  
+            <span class="stars">&#9733&#9733&#9733&#9733</span>
+        </h4>
+                        <h4> Spaciousness: 
+            <span class="stars">&#9733&#9733&#9733&#9733&#9733</span>
+        </h4>
+                        <h4> Odor:   
+            <span class="stars">&#9733&#9733&#9733&#9733&#9733</span>
+        </h4>
+                        <h4> Wait Time:  
+            <span class="stars">&#9733&#9733&#9733</span>
+        </h4>
+
+                        <h4>Overall Ratings:
+          <span class="stars">&#9733&#9733&#9733&#9733</span>
+        </h4>
+                    </div>
+
+                    <div>
+                        <br>
+                        <h4>User 1 Review: 
+            <span class="stars">&#9733&#9733&#9733</span></h4>
+
+                        <p>This restroom was very well maintained and clean. There were no lingering odors, the toilet paper was stocked appropriately and the water from the faucet was actually warm..</p>
+                        <p><a href="#">See more reviews</a>
+                        </p>
+                    </div>
+
+                    <div class="submit_review">
+                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#reviewForm">
+                            <h4>Submit your own review!</h4>
+                    </div>
+
+                </div>
+
+                <br>
+                <div class="modal-footer">
+                    <p>© Navy 2014</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="reviewForm" tabindex="-1" role="dialog" aria-labelledby="yourModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h2 class="modal-title" id="yourModalLabel">Submit a review!</h2>
+                </div>
+
+                <form class="modal-body form-inline">
+                    <h3>Your Ratings:</h3>
+                    <div class="form-group">
+                        <h4> Cleanliness:  </h4>
+                        <div class="raty"></div>
+
+                        <h4> Spaciousness:</h4>
+                        <div class="raty">
+                        </div>
+                        <h4> Odor:</h4> 
+                        <div class="raty">
+                        </div>
+                        <h4> Wait Time:</h4> 
+                        <div class="raty">
+                        </div>
+                        <h4> Overall Rating:</h4>
+                        <div class="raty">
+                        </div>
+                    </div>
+                    <h3>Write Something!</h3>
+                    <textarea class="form-control" rows="4">Write your review here.</textarea>
+                </form>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button submit" class="btn btn-primary">Save changes</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+
+
+
 
 </body>
 
 <script src="ListView.js"></script>
 <script src="MapView.js"></script>
+<script src="jquery.raty.js"></script>
 
 </html>
