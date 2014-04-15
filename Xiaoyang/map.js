@@ -94,12 +94,14 @@ function deleteMarkers(){
 
 
 function attachActivityMessage(marker, num){
-  var message = '<a href="../review_Page.html">'+locationNameArray[num]+'</a>';
+  var message = '<a data-toggle="modal" data-target="#details">'+locationNameArray[num]+'</a>';
   var infowindow = new google.maps.InfoWindow({
     content: message
   });
 
   google.maps.event.addListener(marker, 'click', function(){
+
+    // $('#details').modal('show');
     infowindow.open(marker.get('map'), marker);
   });
 }
