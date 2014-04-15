@@ -31,6 +31,18 @@
          console.log(shows);
          shows.show();
          rows.not(shows).hide();
+
+         if(checkselect.indexOf("tech-g")>=0)
+             myFunctionQuery_G();
+         if(checkselect.indexOf("tech-f1")>=0)
+             myFunctionQuery_1();
+         if(checkselect.indexOf("tech-f2")>=0)
+             myFunctionQuery_2();
+         if(checkselect.indexOf("tech-f3")>=0)
+             myFunctionQuery_3();
+         if(checkselect.indexOf("tech-f4")>=0)
+             myFunctionQuery_4();
+         
      };
 
      $(":radio").change(countChecked);
