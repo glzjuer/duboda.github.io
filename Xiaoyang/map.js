@@ -7,7 +7,7 @@ var map;
 
 var locationArray = [];
 // Check not necessary
-alert("Hello Word! "+locationArray[2]);
+// alert("Hello Word! "+locationArray[2]);
 
 var locationNameArray = [];
 var markers = [];

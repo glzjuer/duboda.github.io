@@ -26,7 +26,7 @@
 
             var shows= rows.filter(checkselect);
             console.log(shows);
-            shows.show();
+            shows.show('slow');
             rows.not(shows).hide();
 
         };
