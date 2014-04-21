@@ -94,7 +94,8 @@ function deleteMarkers(){
 var nameofbathroom;
 
 function attachActivityMessage(marker, num){
-  var message = '<a data-toggle="modal" data-target="#details" onclick = "getname(locationNameArray[num])">'+locationNameArray[num]+'</a>';
+  var nowname = locationNameArray[num];
+  var message = '<a data-toggle="modal" data-target="#details" onclick = "getname(nowname)">'+nowname+'</a>';
   var infowindow = new google.maps.InfoWindow({
     content: message    
   });
