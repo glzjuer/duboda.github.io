@@ -469,4 +469,4 @@ $(".raty").raty({
     alert(score)
   }
 
-})
+});
