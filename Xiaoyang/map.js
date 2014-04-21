@@ -91,18 +91,19 @@ function deleteMarkers(){
   setAllMap(null);
   markers=[];
 }
-
+var nameofbathroom;
 
 function attachActivityMessage(marker, num){
   var message = '<a data-toggle="modal" data-target="#details">'+locationNameArray[num]+'</a>';
   var infowindow = new google.maps.InfoWindow({
-    content: message
+    content: message    
   });
 
   google.maps.event.addListener(marker, 'click', function(){
 
     // $('#details').modal('show');
     infowindow.open(marker.get('map'), marker);
+    alert(locationNameArray[num]);
   });
 }
 
