@@ -85,7 +85,12 @@
          });
 
      })
-     //$('.raty').raty();
+     $('.raty').raty({
+        click : function(score){
+            alert(score)
+        }
+
+     });
 
 
  }
