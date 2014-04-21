@@ -2,7 +2,7 @@
 // prompted by your browser.
 
 var map;
-
+var kk=1;
 
 
 var locationArray = [];
