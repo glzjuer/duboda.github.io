@@ -73,7 +73,7 @@
      // });
 
  });
-
+var overall;
 
  function initialize() {
     $('#list').hide();
@@ -87,7 +87,8 @@
      })
      $('.raty').raty({
         click : function(score){
-            alert(score)
+            overall = score;
+            alert(overall)
         }
 
      });
