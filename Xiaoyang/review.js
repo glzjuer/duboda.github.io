@@ -1,5 +1,8 @@
-$(".raty").raty({
-  readOnly : true,
-  score : 3
+var overall;
 
+$(".raty").raty({
+  click : function(score){
+  	overall = socre;
+  	alert(overall)
+  }
 });
