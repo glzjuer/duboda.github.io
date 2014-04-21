@@ -92,6 +92,34 @@ var overall;
         }
 
      });
+}
 
+function myFunctionChange(){
+  Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
+  var GameScore = Parse.Object.extend("TechBathroom");
+  var query = new Parse.Query(GameScore);
+  query.equalTo("gender", "F")&&query.equalTo("name","102");
+  query.find({
+    success: function(results) {
+      alert("Successfully retrieved " + results.length + " scores.");
+      // Do something with the returned Parse.Object values
+      for (var i = 0; i < results.length; i++) { 
+        var object = results[i];
+        var number1;
+        var review;
+        number1 = object.get('number');
+        review = object.get('overall');
+        number1 = number1+1;
+        review = review + overall;
+        object.set("number", number1);
+        object.set("overall", review);
+        object.save();
+        alert(object.get('number'));
+      }
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+  });
 
- }
+};
