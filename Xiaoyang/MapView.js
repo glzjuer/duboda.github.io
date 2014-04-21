@@ -3,7 +3,7 @@
          "padding-top": $(".navbar").height() + 30 + "px"
      });
  });
-
+var getid;
  $(document).ready(function () {
 
      initialize();
@@ -58,11 +58,16 @@
          $('#list').hide();
      })
 
+     $("#details").on('show.bs.modal',function(e){
 
-     $("#x1").raty({
-         readOnly: true,
-         score: 3
-     });
+        var invoker = $(e.relatedTarget);
+        getid = invoker.prop('id');
+     }
+ //    $("#details").on('hide.bs.modal',function(e){
+
+
+ //    }
+
      // console.log($('tbody').children().length);
 
      // $('tbody').children().each(function(){
@@ -98,7 +103,7 @@ function myFunctionChange(){
   Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
   var GameScore = Parse.Object.extend("TechBathroom");
   var query = new Parse.Query(GameScore);
-  query.equalTo("gender", "F")&&query.equalTo("name","102");
+  query.equalTo("name",getid);
   query.find({
     success: function(results) {
       alert("Successfully retrieved " + results.length + " scores.");
