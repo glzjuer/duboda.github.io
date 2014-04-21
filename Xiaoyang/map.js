@@ -92,10 +92,9 @@ function deleteMarkers(){
   markers=[];
 }
 var nameofbathroom;
-var nowname;
+
 function attachActivityMessage(marker, num){
-  nowname = locationNameArray[num];
-  var message = '<a data-toggle="modal" data-target="#details" onclick = "getname(nowname)">'+nowname+'</a>';
+  var message = '<a data-toggle="modal" data-target="#details">'+locationNameArray[num]+'</a>';
   var infowindow = new google.maps.InfoWindow({
     content: message    
   });
@@ -105,11 +104,6 @@ function attachActivityMessage(marker, num){
     // $('#details').modal('show');
     infowindow.open(marker.get('map'), marker);
   });
-}
-function getname(namename){
-
-  nameofbathroom = namename;
-  alert(namename);
 }
 
 
