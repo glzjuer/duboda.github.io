@@ -93,7 +93,6 @@ var overall;
 
      });
 }
-<srcipt src="map.js"></srcipt>
 alert(kk);
 
 function myFunctionChange(){
