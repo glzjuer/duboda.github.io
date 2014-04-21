@@ -466,7 +466,7 @@
 $(".raty").raty({
   click : function (score) {
 
-    alert(score);
+    alert(score)
   }
 
 })
