@@ -5,15 +5,29 @@
 </script>
 
 <script>
+var techOverlay;
+
 function initialize()
 {
+
+var tech = new google.maps.LatLng(42.057807,-87.675765);
+var imageBounds = new google.maps.LatLngBounds(
+      new google.maps.LatLng(40.712216, -74.22655),
+      new google.maps.LatLng(40.773941, -74.12544));
 var mapProp = {
-  	center:new google.maps.LatLng(42.057937,-87.675755),
- 	zoom:15,
+  	center: tech,
+ 	zoom:18,
   	mapTypeId:google.maps.MapTypeId.ROADMAP
   };
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+techOverlay = new google.maps.GroundOverlay(
+      'Ground_Floor_Map.png',
+      imageBounds);
+  historicalOverlay.setMap(map);
+
 }
+
+
 
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
