@@ -32,15 +32,15 @@ var getid;
          shows.show('slow');
          rows.not(shows).hide();
 
-         if(checkselect.indexOf("tech-g")>=0)
+         if(checkselect.indexOf("tech.f0")>=0)
              myFunctionQuery_G();
-         if(checkselect.indexOf("tech-f1")>=0)
+         if(checkselect.indexOf("tech.f1")>=0)
              myFunctionQuery_1();
-         if(checkselect.indexOf("tech-f2")>=0)
+         if(checkselect.indexOf("tech.f2")>=0)
              myFunctionQuery_2();
-         if(checkselect.indexOf("tech-f3")>=0)
+         if(checkselect.indexOf("tech.f3")>=0)
              myFunctionQuery_3();
-         if(checkselect.indexOf("tech-f4")>=0)
+         if(checkselect.indexOf("tech.f4")>=0)
              myFunctionQuery_4();
          
      };
@@ -62,6 +62,7 @@ var getid;
 
         var invoker = $(e.relatedTarget);
         getid = invoker.prop('id');
+        console.log(getid);
      })
  //    $("#details").on('hide.bs.modal',function(e){
 
@@ -77,19 +78,115 @@ var getid;
      //     });
      // });
 
- });
-var overall;
 
- function initialize() {
-    $('#list').hide();
+
+ });
+
+function redraw(obj){
+    var scorestar = obj.get('overall');
+    // console.log(scorestar);
+    if(scorestar > 0) scorestar = scorestar/obj.get('number');
+    var to_append = '<tr class = "'+ obj.get('gender') + ' ' +
+                    'tech' + ' '+ 'f'+obj.get('floor')+'" '
+                    +'data-toggle = "modal" data-target="#details">'+
+                        '<td>'+obj.get('name')+'</td>'+
+                        '<td><div value = "'+scorestar+'"></div></td></tr>';
+
+  $('tbody').append(to_append);
+
+}
+
+
+var overall;
+function drawstars(){
+    
+    // console.log('after'+scorestar);
      var column_stars = $("#stars").index();
      $('tbody').children().each(function () {
+        var score_ = $(this).find('div').attr('value'); 
+        console.log(score_);
          $(this).find('td').eq(column_stars).raty({
              readOnly: true,
-             score: 3
+             score: score_
          });
 
-     })
+     });
+ }
+
+
+ function initialize() {
+
+//======
+Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
+  var GameScore = Parse.Object.extend("TechBathroom");
+  var query1 = new Parse.Query(GameScore);
+  var query2 = new Parse.Query(GameScore);
+
+
+  query1.equalTo("gender","M");
+  query2.equalTo("gender","F");
+  query1.find({
+    success: function(results) {
+      console.log("Successfully retrieved Male" + results.length + " scores.");
+      // Do something with the returned Parse.Object values
+      for (var i = 0; i < results.length; i++) { 
+        var object = results[i];
+        // console.log(object.get('gender'));
+        redraw(object);
+        drawstars();
+      }
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+  });
+  //======
+  query2.find({
+    success: function(results) {
+      console.log("Successfully retrieved Famle" + results.length + " scores.");
+      // Do something with the returned Parse.Object values
+      for (var i = 0; i < results.length; i++) { 
+        var object = results[i];
+        // console.log(object.get('gender'));
+        redraw(object);
+        drawstars();
+
+      }
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $('#list').hide();
+
      $('.raty').raty({
         click : function(score){
             overall = score;
@@ -128,3 +225,7 @@ function myFunctionChange(){
   });
 
 };
+
+function query_bath(){
+
+}
