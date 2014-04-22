@@ -62,7 +62,6 @@ var getid;
 
         var invoker = $(e.relatedTarget);
         getid = invoker.prop('id');
-        console.log(getid);
      })
  //    $("#details").on('hide.bs.modal',function(e){
 

@@ -91,18 +91,19 @@ function deleteMarkers(){
   setAllMap(null);
   markers=[];
 }
-
+var nameofbathroom;
 
 function attachActivityMessage(marker, num){
   var message = '<a data-toggle="modal" data-target="#details">'+locationNameArray[num]+'</a>';
   var infowindow = new google.maps.InfoWindow({
-    content: message
+    content: message    
   });
 
   google.maps.event.addListener(marker, 'click', function(){
 
     // $('#details').modal('show');
     infowindow.open(marker.get('map'), marker);
+    alert(locationNameArray[num]);
   });
 }
 
@@ -130,8 +131,12 @@ function myFunctionQuery_G(){
   Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
   var GameScore = Parse.Object.extend("TechBathroom");
   var query = new Parse.Query(GameScore);
+  var gender = $("input[name='gender']:checked").val();
+  
+  console.log(gender);
+
   locationArray = [];
-  query.equalTo("gender", "F")&&query.equalTo("floor",0);
+  query.equalTo("gender", gender)&&query.equalTo("floor",0);
   query.find({
     success: function(results) {
       // alert("Successfully retrieved " + results.length + " scores.");
@@ -189,7 +194,11 @@ function myFunctionQuery_1(){
   locationArray = [];
   var GameScore = Parse.Object.extend("TechBathroom");
   var query = new Parse.Query(GameScore);
-  query.equalTo("gender", "F")&&query.equalTo("floor",1);
+  var gender = $("input[name='gender']:checked").val();
+  
+  console.log(gender);
+
+  query.equalTo("gender", gender)&&query.equalTo("floor",1);
   query.find({
     success: function(results) {
       // alert("Successfully retrieved " + results.length + " scores.");
@@ -247,7 +256,10 @@ function myFunctionQuery_2(){
   var GameScore = Parse.Object.extend("TechBathroom");
   var query = new Parse.Query(GameScore);
   locationArray = [];
-  query.equalTo("gender", "F")&&query.equalTo("floor",2);
+  var gender = $("input[name='gender']:checked").val();
+  
+  console.log(gender);
+  query.equalTo("gender", gender)&&query.equalTo("floor",2);
   query.find({
     success: function(results) {
       // alert("Successfully retrieved " + results.length + " scores.");
@@ -306,7 +318,10 @@ function myFunctionQuery_3(){
   var GameScore = Parse.Object.extend("TechBathroom");
   var query = new Parse.Query(GameScore);
   locationArray = [];
-  query.equalTo("gender", "F")&&query.equalTo("floor",3);
+  var gender = $("input[name='gender']:checked").val();
+  
+  // console.log(gender);
+  query.equalTo("gender", gender)&&query.equalTo("floor",3);
   query.find({
     success: function(results) {
       // alert("Successfully retrieved " + results.length + " scores.");
@@ -365,7 +380,10 @@ function myFunctionQuery_4(){
   var GameScore = Parse.Object.extend("TechBathroom");
   var query = new Parse.Query(GameScore);
   locationArray = [];
-  query.equalTo("gender", "F")&&query.equalTo("floor",4);
+  var gender = $("input[name='gender']:checked").val();
+  
+  console.log(gender);
+  query.equalTo("gender", gender)&&query.equalTo("floor",4);
   query.find({
     success: function(results) {
       // alert("Successfully retrieved " + results.length + " scores.");
