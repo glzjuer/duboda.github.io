@@ -88,9 +88,10 @@ function redraw(obj){
     if(scorestar > 0) scorestar = scorestar/obj.get('number');
     var to_append = '<tr class = "'+ obj.get('gender') + ' ' +
                     'tech' + ' '+ 'f'+obj.get('floor')+'" '
-                    +'data-toggle = "modal" data-target="#details">'+
+                    +'data-toggle = "modal" data-target="#details" '+'id = "'+obj.get('name')+'">'+
                         '<td>'+obj.get('name')+'</td>'+
                         '<td><div value = "'+scorestar+'"></div></td></tr>';
+               
 
   $('tbody').append(to_append);
 
@@ -102,15 +103,22 @@ function drawstars(){
     
     // console.log('after'+scorestar);
      var column_stars = $("#stars").index();
-     $('tbody').children().each(function () {
-        var score_ = $(this).find('div').attr('value'); 
-        console.log(score_);
-         $(this).find('td').eq(column_stars).raty({
-             readOnly: true,
-             score: score_
-         });
+     console.log($('tbody').children());
+     //find('td').eq(column_stars).raty({
+   //  $('tbody').children().each(function () {
+  //      var score_ = $(this).find('td');
+ //       var mmm = score_[1].firstChild.value;
+ //       console.log("aaaaaaaaaaaaaaaaaa");
+ //       console.log(mmm); 
+ //       console.log("aaaaaaaaaaaaaaaaaa");
+ //       console.log(score_);
+ //        $(this).find('td').eq(column_stars).raty({
 
-     });
+         //     readOnly: true,
+         //     score: 3
+         // });
+
+//     });
  }
 
 
@@ -133,8 +141,8 @@ Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhW
         var object = results[i];
         // console.log(object.get('gender'));
         redraw(object);
-        drawstars();
       }
+      drawstars();
   },
   error: function(error) {
     alert("Error: " + error.code + " " + error.message);
@@ -149,9 +157,8 @@ Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhW
         var object = results[i];
         // console.log(object.get('gender'));
         redraw(object);
-        drawstars();
-
       }
+       drawstars();      
   },
   error: function(error) {
     alert("Error: " + error.code + " " + error.message);
@@ -194,6 +201,12 @@ Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhW
         }
 
      });
+          $('#ss').raty({
+readOnly: true,
+score: 3
+        })
+
+ 
 }
 
 function myFunctionChange(){
