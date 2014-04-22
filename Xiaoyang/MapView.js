@@ -3,7 +3,7 @@
          "padding-top": $(".navbar").height() + 30 + "px"
      });
  });
-
+var getid;
  $(document).ready(function () {
 
      initialize();
@@ -58,11 +58,17 @@
          $('#list').hide();
      })
 
+     $("#details").on('show.bs.modal',function(e){
 
-     $("#x1").raty({
-         readOnly: true,
-         score: 3
-     });
+        var invoker = $(e.relatedTarget);
+        getid = invoker.prop('id');
+        console.log(getid);
+     })
+ //    $("#details").on('hide.bs.modal',function(e){
+
+
+ //    }
+
      // console.log($('tbody').children().length);
 
      // $('tbody').children().each(function(){
@@ -73,7 +79,7 @@
      // });
 
  });
-
+var overall;
 
  function initialize() {
     $('#list').hide();
@@ -85,7 +91,41 @@
          });
 
      })
-     $('.raty').raty();
+     $('.raty').raty({
+        click : function(score){
+            overall = score;
+            alert(overall)
+        }
 
+     });
+}
 
- }
+function myFunctionChange(){
+  Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
+  var GameScore = Parse.Object.extend("TechBathroom");
+  var query = new Parse.Query(GameScore);
+  query.equalTo("name",getid);
+  query.find({
+    success: function(results) {
+      alert("Successfully retrieved " + results.length + " scores.");
+      // Do something with the returned Parse.Object values
+      for (var i = 0; i < results.length; i++) { 
+        var object = results[i];
+        var number1;
+        var review;
+        number1 = object.get('number');
+        review = object.get('overall');
+        number1 = number1+1;
+        review = review + overall;
+        object.set("number", number1);
+        object.set("overall", review);
+        object.save();
+        alert(object.get('number'));
+      }
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+  });
+
+};
