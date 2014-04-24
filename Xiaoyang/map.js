@@ -105,7 +105,7 @@ function attachActivityMessage(marker, num){
 
     // $('#details').modal('show');
     infowindow.open(marker.get('map'), marker);
-    alert(locationNameArray[num]);
+    // alert(locationNameArray[num]);
   });
 }
 
