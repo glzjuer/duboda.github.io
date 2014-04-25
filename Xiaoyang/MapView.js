@@ -23,13 +23,14 @@
      });
      console.log(checkselect);
 
-     var rows = $('table.table.table-striped tr');
+     var rows = $('table.table tr');
      console.log(rows);
 
      var shows = rows.filter(checkselect);
      console.log(shows);
      shows.show('slow');
      rows.not(shows).hide();
+     $('table.table').find($('#head')).show();
 
      if (checkselect.indexOf("tech.f0") >= 0)
          myFunctionQuery_G();
@@ -128,8 +129,12 @@
      if (scorestar > 0)
          scorestar = roundHalf(scorestar / obj.get('number'));
      // console.log(scorestar);
+     var gender = obj.get('gender');
+     var color;
+     if(gender === 'M') color = ' style = "background: radial-gradient(#cfd8fc, rgba(255,0,0,0))" ';
+     else color = ' style = "background: radial-gradient(#fccfcf, rgba(255,0,0,0))" ';
 
-     var to_append = '<tr class = "' + obj.get('gender') + ' ' +
+     var to_append = '<tr '+ color +' class = "' + obj.get('gender') + ' ' +
          'tech' + ' ' + 'f' + obj.get('floor') + '" ' + 'data-toggle = "modal" data-target="#details" ' + 'id = "' + obj.get('name') + '">' +
          '<td>' + obj.get('name') + '</td>' +
          '<td><div id = "' + obj.get('name') + '-" value = "' + scorestar + '"></div></td></tr>';
@@ -206,9 +211,6 @@
              alert("Error: " + error.code + " " + error.message);
          }
      });
-
-
-
 
      $('#list').hide();
 
