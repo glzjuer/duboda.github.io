@@ -11,7 +11,7 @@
 
 
 <script>
-var overlay;
+    var overlay;
 
     //DebugOverlay.prototype = new google.maps.OverlayView();
 
@@ -23,7 +23,7 @@ var overlay;
         center: tech
       };
 
-      var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+      var map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
       var swBound = new google.maps.LatLng(42.057036603909694, -87.6769412539673);
       var neBound = new google.maps.LatLng(42.058618137087365, -87.67480728836068);      
       var bounds = new google.maps.LatLngBounds(swBound, neBound);
