@@ -13,8 +13,6 @@
 <script>
     var overlay;
 
-    //DebugOverlay.prototype = new google.maps.OverlayView();
-
     function initialize() {
      var tech = new google.maps.LatLng(42.057807,-87.675765);
 
@@ -28,53 +26,19 @@
       var neBound = new google.maps.LatLng(42.058618137087365, -87.67480728836068);      
       var bounds = new google.maps.LatLngBounds(swBound, neBound);
 
-      var srcImage = 'http://s14.postimg.org/7xi2uc7qp/First_Floor_Map.png';
+      var srcImage = 'Ground_Floor_Map.png';
+      //var srcImage = 'First_Floor_Map.png';
+      //var srcImage = 'Second_Floor_Map.png';
+      //var srcImage = 'Third_Floor_Map.png';
+      //var srcImage = 'Fourth_Floor_Map.png';
        
       overlay = new google.maps.GroundOverlay(srcImage, bounds);
       overlay.setMap(map);
 
     }
     
-    /* function DebugOverlay(bounds, image, map) {
-
-      this.bounds_ = bounds;
-      this.image_ = image;
-      this.map_ = map;
-      this.div_ = null;
-      this.setMap(map);
-    }
-
-    DebugOverlay.prototype.onAdd = function() {
-
-      var div = document.createElement('div');
-      div.style.borderStyle = 'none';
-      div.style.borderWidth = '0px';
-      div.style.position = 'absolute';
-      var img = document.createElement('img');
-      img.src = this.image_;
-      img.style.width = '100%';
-      img.style.height = '100%';
-      img.style.opacity = '1.0';
-      img.style.position = 'absolute';
-      div.appendChild(img);
-      this.div_ = div;
-      var panes = this.getPanes();
-      panes.overlayLayer.appendChild(div);
-    };
-
-    DebugOverlay.prototype.draw = function() {
-      var overlayProjection = this.getProjection();
-      var sw = overlayProjection.fromLatLngToDivPixel(this.bounds_.getSouthWest());
-      var ne = overlayProjection.fromLatLngToDivPixel(this.bounds_.getNorthEast());
-      var div = this.div_;
-      div.style.left = sw.x + 'px';
-      div.style.top = ne.y + 'px';
-      div.style.width = (ne.x - sw.x) + 'px';
-      div.style.height = (sw.y - ne.y) + 'px';
-    }; */
-    
-    //initialize();
     google.maps.event.addDomListener(window, 'load', initialize);
+    
 </script>
 </body>
 </html>
